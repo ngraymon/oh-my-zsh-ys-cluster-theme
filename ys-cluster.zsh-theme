@@ -79,7 +79,7 @@ ${virtualenv_info}\
 %{$fg[cyan]%}%n \
 %{$fg[white]%}@ \
 %{$fg[green]%}$(ys_cluster_name)$(box_name) \
-%{$fg[blue]%}$(ys_prompt_jobid)\
+%{$fg[cyan]%}$(ys_prompt_jobid)\
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
@@ -94,7 +94,7 @@ ${virtualenv_info}\
 %{$bg[yellow]%}%{$fg[cyan]%}%n%{$reset_color%} \
 %{$fg[white]%}@ \
 %{$fg[green]%}$(box_name) \
-%{$fg[blue]%}$(ys_prompt_jobid)\
+%{$fg[cyan]%}$(ys_prompt_jobid)\
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
