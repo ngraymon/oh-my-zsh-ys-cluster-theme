@@ -44,14 +44,23 @@ ys_hg_prompt_info() {
 	fi
 }
 
+
+# choose to show
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
 # Virtualenv: current working virtualenv
 local virtualenv_info='$(ys_prompt_virtualenv)'
 ys_prompt_virtualenv() {
     local virtualenv_path="$VIRTUAL_ENV"
     if [[ -n $virtualenv_path && -n $VIRTUAL_ENV_DISABLE_PROMPT ]]; then
-        echo -n "%{$fg[white]%}(`basename $virtualenv_path`) "
-    else
+        # if pyenv is not printing out the current environment
+        echo -n "%{$fg[magenta]%}(`basename $virtualenv_path`) "
+    elif [[ -n $virtualenv_path ]]; then
+        # don't need to print the environment twice
         echo -n ""
+    else
+        # if no virtual environment is active
+        echo -n "%{$fg[white]%}() "
     fi
 }
 
